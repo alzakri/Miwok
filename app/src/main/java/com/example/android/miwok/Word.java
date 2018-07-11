@@ -31,7 +31,7 @@ public class Word {
      * Get the Miwok translation of the word.
      */
     public String getMiwokTranslation() {
-        return mMiwokTranslation;
+            return mMiwokTranslation;
     }
 
 
