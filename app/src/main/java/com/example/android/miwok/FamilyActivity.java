@@ -15,20 +15,25 @@ public class FamilyActivity extends AppCompatActivity {
 
         // Create a list of words
         ArrayList<Word> words = new ArrayList<Word>();
-        words.add(new Word("father", "әpә"));
-        words.add(new Word("mother", "әṭa"));
-        words.add(new Word("son", "angsi"));
-        words.add(new Word("daughter", "tune"));
-        words.add(new Word("older brother", "taachi"));
-        words.add(new Word("younger brother", "chalitti"));
-        words.add(new Word("older sister", "teṭe"));
-        words.add(new Word("younger sister", "kolliti"));
-        words.add(new Word("grandmother ", "ama"));
-        words.add(new Word("grandfather", "paapa"));
+        words.add(new Word("father", "otac", R.mipmap.family_father));
+        words.add(new Word("mother", "majka", R.mipmap.family_mother));
+        words.add(new Word("son", "sin", R.mipmap.family_son));
+        words.add(new Word("daughter", "kćerka", R.mipmap.family_daughter));
+        words.add(new Word("uncle", "daižda", R.mipmap.family_father));
+        words.add(new Word("brother", "brat", R.mipmap.family_older_brother));
+        words.add(new Word("sister", "sestra", R.mipmap.family_older_sister));
+        words.add(new Word("He And She", "on i ona"));
+        words.add(new Word("Me And you", "ja i ti"));
+        words.add(new Word("We are family ", "Mi smo porodica", R.mipmap.family_family2));
+        words.add(new Word("grandfather", "djed", R.mipmap.family_grandfather));
+        words.add(new Word("Man", "muškarac", R.mipmap.family_father));
+        words.add(new Word("Woman", "žena", R.mipmap.family_mother));
+        words.add(new Word("child", "dijete", R.mipmap.family_child));
+
 
         // Create an {@link WordAdapter}, whose data source is a list of {@link Word}s. The
         // adapter knows how to create list items for each item in the list.
-        WordAdapter adapter = new WordAdapter(this, words);
+        WordAdapter adapter = new WordAdapter(this, words, R.color.category_family);
 
         // Find the {@link ListView} object in the view hierarchy of the {@link Activity}.
         // There should be a {@link ListView} with the view ID called list, which is declared in the

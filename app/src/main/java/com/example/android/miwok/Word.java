@@ -8,6 +8,26 @@ public class Word {
     /** Miwok translation for the word */
     private String mMiwokTranslation;
 
+    // Drawable resource ID
+    private int mImageResourceId = NO_IMAGE;
+
+    private static final int NO_IMAGE = -1;
+
+    /**
+     * Create a new Word object.
+     *
+     * @param defaultTranslation is the word in a language that the user is already familiar with
+     *                           (such as English)
+     * @param miwokTranslation is the word in the Miwok language
+     *
+     * @param imageResourceId is the image
+     */
+    public Word(String defaultTranslation, String miwokTranslation, int imageResourceId) {
+        mDefaultTranslation = defaultTranslation;
+        mMiwokTranslation = miwokTranslation;
+        mImageResourceId = imageResourceId;
+    }
+
     /**
      * Create a new Word object.
      *
@@ -18,6 +38,7 @@ public class Word {
     public Word(String defaultTranslation, String miwokTranslation) {
         mDefaultTranslation = defaultTranslation;
         mMiwokTranslation = miwokTranslation;
+
     }
 
     /**
@@ -34,5 +55,15 @@ public class Word {
             return mMiwokTranslation;
     }
 
+    /**
+     * Get the image resource ID
+     */
+    public int getImageResourceId() {
+        return mImageResourceId;
+    }
+
+    public boolean hasImage (){
+        return mImageResourceId != NO_IMAGE;
+    }
 
 }
